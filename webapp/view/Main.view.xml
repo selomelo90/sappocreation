@@ -1,0 +1,32 @@
+<mvc:View controllerName="com.ag.Z00_HelloWorld4.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Button text="Listele" press="onListele" />
+						<Text text="Liste güncelleme zamanı:" /><Text id="idDate" text="" />
+						<Table id="idPersonelTable" items="{data>/PersonelData}">
+							<columns>
+								<Column width="12em">
+									<Text text="Sicil" />
+								</Column>
+								<Column width="12em">
+									<Text text="Ad Soyad" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{data>Sicil}" />
+										<Text text="{data>AdSoyad}" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
